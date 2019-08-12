@@ -1,0 +1,143 @@
+\documentclass{tufte-book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xspace} % Prints a trailing space in a smart way.
+\usepackage{units}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+
+%%%%%%%%%%%%%%%%Setup%%%%%%%%%%%%%%%%
+\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+
+% Prints argument within hanging parentheses (i.e., parentheses that take
+% up no horizontal space).  Useful in tabular environments.
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
+
+% Some shortcuts for Tufte's book titles.  The lowercase commands will
+% produce the initials of the book title in italics.  The all-caps commands
+% will print out the full title of the book in italics.
+\newcommand{\vdqi}{\textit{VDQI}\xspace}
+\newcommand{\ei}{\textit{EI}\xspace}
+\newcommand{\ve}{\textit{VE}\xspace}
+\newcommand{\be}{\textit{BE}\xspace}
+\newcommand{\VDQI}{\textit{The Visual Display of Quantitative Information}\xspace}
+\newcommand{\EI}{\textit{Envisioning Information}\xspace}
+\newcommand{\VE}{\textit{Visual Explanations}\xspace}
+\newcommand{\BE}{\textit{Beautiful Evidence}\xspace}
+\newcommand{\TL}{Tufte-\LaTeX\xspace}
+
+\newcommand{\monthyear}{%
+	\ifcase\month\or January\or February\or March\or April\or May\or June\or
+	July\or August\or September\or October\or November\or
+	December\fi\space\number\year
+}
+
+% Prints an epigraph and speaker in sans serif, all-caps type.
+\newcommand{\openepigraph}[2]{%
+	%\sffamily\fontsize{14}{16}\selectfont
+	\begin{fullwidth}
+		\sffamily\large
+		\begin{doublespace}
+			\noindent\allcaps{#1}\\% epigraph
+			\noindent\allcaps{#2}% author
+		\end{doublespace}
+	\end{fullwidth}
+}
+
+% Inserts a blank page	
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+% Typesets the font size, leading, and measure in the form of 10/12x26 pc.
+\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}}
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+
+%color
+\definecolor{orange}{HTML}{E57628}
+
+%Title style
+\renewcommand{\maketitlepage}{%
+	\cleardoublepage
+	\newpagecolor{orange}
+	{%
+		
+		\begin{fullwidth}%
+			\fontsize{18}{20}\selectfont\par\noindent\textcolor{white}{\textit{\thanklessauthor}}%
+			\vspace{11.5pc}%
+			\fontsize{36}{40}\selectfont\par\noindent\textcolor{white}{\thanklesstitle}%
+			\vfill
+			\fontsize{14}{16}\selectfont\par\noindent\textit{\textcolor{white}{\thanklesspublisher}}%
+		\end{fullwidth}%
+	}%
+	\thispagestyle{empty}%
+	\clearpage
+}
+
+\let\cleardoublepage\clearpage
+
+%Bib header color
+\renewcommand{\bibname}{\textcolor{orange}{References}}
+
+%%%%%%%%%%%%%%MetaData%%%%%%%%%%%%%%%%
+\author{Team TDART}
+\title{Jury Narratives: Innovation}
+\publisher{Université Abdelmalek Essaadi}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	\newpagecolor{white}
+	\newpage
+	\begin{fullwidth}
+		~\vfill
+		\thispagestyle{empty}
+		\setlength{\parindent}{0pt}
+		\setlength{\parskip}{\baselineskip}
+		Copyright \copyright\ \the\year\ \thanklessauthor
+		
+		\par\smallcaps{Published by \thanklesspublisher}
+		
+		%	\par\smallcaps{tufte-latex.googlecode.com}
+		
+		\par Licensed under the Apache License, Version 2.0 (the ``License''); you may not
+		use this file except in compliance with the License. You may obtain a copy
+		of the License at \url{http://www.apache.org/licenses/LICENSE-2.0}. Unless
+		required by applicable law or agreed to in writing, software distributed
+		under the License is distributed on an \smallcaps{``AS IS'' BASIS, WITHOUT
+			WARRANTIES OR CONDITIONS OF ANY KIND}, either express or implied. See the
+		License for the specific language governing permissions and limitations
+		under the License.\index{license}
+		
+		%\par\textit{First printing, \monthyear}
+	\end{fullwidth}
+	
+	
+	\textcolor{orange}{\chapter*{Introduction}}
+	\justifying
+	At Team TDART, It is our firm belief that current day technology is more than sufficient to build market competitive net-zero energy houses and buildings through the right legislation and policies. While most current households consume significant amounts of energy, they are the result of human heritage and collective knowledge concerning domestic life and family organisation. Which is why we consider ignoring current and old home design and construction strategies a missed opportunity, even for radically different and novel approaches. Named after the Amazigh word for "home", TDART aims to integrate local design strategies with modern technology to build the next generation of energy-efficient homes.
+	
+	\textcolor{orange}{\chapter{The patio: a local inspiration with a new touch}}
+	\label{ch:patio}
+	
+	
+	Despite its association with middle eastern regions, courtyard housing is one of the oldest and most distinctive forms of domestic development, occurring in many regions of the world from Morocco to the Asian far east across a time span of at least 5000 years\cite{edwards2006courtyard}. The courtyard does have some cultural and social significance, but more importantly it has an impact on the house in terms of thermal comfort and airflow control.\\
+	The courtyard or "patio" is shaded until late in the day even in low latitude regions. During the night, it loses heat by radiation to the sky\cite{batty1991natural} and provides natural cooling as the stratified cool air from convective flows in the courtyard seeps into the surrounding rooms. Many authors\cite{scudo1988climatic,fathy1986natural} conclude that a courtyard constitutes a free and passive cooling system for the house, with some reservations being shown by others\cite{etzion1990thermal}, specifically for non-shaded courtyards where courtyard temperature might turn out to be higher than ambient temperature. TDART takes the best of both worlds and incorporates a retractable roof in the patio. This protects the courtyard from solar irradiation keeping the air temperature as low as possible when the roof is closed during the day when the sun is high, while also providing the option to open it to the sky in the mornings or later in the night to allow the walls and surface of the patio to irradiate heat away towards the sky. It has been noted that a courtyard that includes a body of water (pond or pool) and that can be covered during the day provides remarkable cooling properties\cite{al2001effect}. This is where the fountain comes in, it salvages the benefits of a body of water and emulate the same effect on the patio while being a much cheaper option than the pool.\\
+	In conclusion, TDART makes use of the patio's inherent cooling and ventilation properties and adds novel ideas such as a fountain and a retractable roof to improve it while also mitigating some of the possible shortcomings of a simple courtyard.
+	
+	\textcolor{orange}{\chapter{Variable Refrigerant Volume}}
+	
+	\textcolor{orange}{\chapter{Home automation}}
+	-system details needed-
+	\textcolor{orange}{\chapter{Water Reuse}}
+	-details needed-
+	
+	\bibliography{sample-handout}
+	\bibliographystyle{plainnat}
+	
+\end{document}

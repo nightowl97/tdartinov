@@ -25,4 +25,5 @@
 *.synctex.gz
 *.pdf
 *.tex~
+*.bib~
 *.xdv

@@ -1,4 +1,4 @@
-\documentclass{tufte-book}
+\documentclass[justified]{tufte-book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -9,6 +9,9 @@
 \usepackage{units}
 \usepackage{xcolor}
 \usepackage{pagecolor}
+\usepackage{siunitx}
+\usepackage{booktabs}
+
 
 
 %%%%%%%%%%%%%%%%Setup%%%%%%%%%%%%%%%%
@@ -86,8 +89,11 @@
 \renewcommand{\bibname}{\textcolor{orange}{References}}
 
 %%%%%%%%%%%%%%MetaData%%%%%%%%%%%%%%%%
-\author{Team TDART}
-\title{Jury Narratives: Innovation}
+
+\newsavebox{\titleimage}
+\savebox{\titleimage}{\centering\includegraphics[height=5\baselineskip]{logo_white}}
+\author{Team TDART\hfill \usebox{\titleimage}}
+\title[Jury Narratives]{Jury Narratives: Innovation}
 \publisher{Université Abdelmalek Essaadi}
 
 \begin{document}
@@ -120,21 +126,47 @@
 	
 	
 	\textcolor{orange}{\chapter*{Introduction}}
-	\justifying
 	At Team TDART, It is our firm belief that current day technology is more than sufficient to build market competitive net-zero energy houses and buildings through the right legislation and policies. While most current households consume significant amounts of energy, they are the result of human heritage and collective knowledge concerning domestic life and family organisation. Which is why we consider ignoring current and old home design and construction strategies a missed opportunity, even for radically different and novel approaches. Named after the Amazigh word for "home", TDART aims to integrate local design strategies with modern technology to build the next generation of energy-efficient homes.
 	
 	\textcolor{orange}{\chapter{The patio: a local inspiration with a new touch}}
 	\label{ch:patio}
 	
 	
-	Despite its association with middle eastern regions, courtyard housing is one of the oldest and most distinctive forms of domestic development, occurring in many regions of the world from Morocco to the Asian far east across a time span of at least 5000 years\cite{edwards2006courtyard}. While the courtyard does have some cultural and social significance, to us is its impact on the house in terms of thermal comfort and airflow control is more important.\\
-	The courtyard or "patio" is mostly shaded until late in the day even in low latitude regions. During the night, it loses heat by radiation to the sky\cite{batty1991natural} and provides natural cooling as the stratified cool air from convective flows in the courtyard seeps into the surrounding rooms. Many authors\cite{scudo1988climatic,fathy1986natural} conclude that a courtyard constitutes a free and passive cooling system for the house, with some reservations being shown by others\cite{etzion1990thermal}, specifically for non-shaded courtyards where courtyard temperature might turn out to be higher than ambient temperature. TDART takes the best of both worlds and incorporates a retractable roof in the patio. This protects the courtyard from solar irradiation, keeping the air temperature as low as possible when the roof is closed during the day and the sun is high, while also providing the option to open it to the sky in the mornings or later in the night to allow the walls and surface of the patio to irradiate heat away towards the sky. It has been noted that a courtyard that includes a body of water (pond or pool) and that can be covered during the day provides remarkable cooling properties\cite{al2001effect}. This is where the fountain comes in, it salvages the benefits of a body of water and has a similar effect on the patio while being a much cheaper option than the pool.\\
+	Despite its association with middle eastern regions, courtyard housing is one of the oldest and most distinctive forms of domestic development, occurring in many regions of the world from Morocco to the Asian far east across a time span of at least 5000 years\cite{edwards2006courtyard}. While the courtyard does have some cultural and social significance, more important to us is its impact on the house in terms of thermal comfort and airflow control.\\
+	The courtyard or "patio" is mostly shaded until late in the day even in low latitude regions. During the night, it loses heat by radiation to the sky\cite{batty1991natural} and provides natural cooling as the stratified cool air from convective flows in the courtyard seeps into the surrounding rooms. Many authors\cite{scudo1988climatic,fathy1986natural} conclude that a courtyard constitutes a free and passive cooling system for the house, with some reservations being shown by others\cite{etzion1990thermal}, specifically for non-shaded courtyards where courtyard temperature might turn out to be higher than ambient temperature. TDART takes the best of both worlds and incorporates a retractable roof in the patio. This protects the courtyard from solar irradiation, keeping the air temperature as low as possible when the roof is closed during the day and the sun is high, while also providing the option to open it to the sky in the mornings or later in the night to allow the walls and surface of the patio to radiate heat away towards the sky. It has been noted that a courtyard that includes a body of water (pond or pool) and that can be covered during the day provides remarkable cooling properties\cite{al2001effect}. This is where the fountain comes in, it salvages the benefits of a body of water and has a similar effect on the patio while being a much cheaper option than the pool.\\
 	In conclusion, TDART makes use of the patio's inherent cooling and ventilation properties and adds novel ideas such as a fountain and a retractable roof to improve it while also mitigating some of the possible shortcomings of a simple courtyard.
 	
-	\textcolor{orange}{\chapter{Variable Refrigerant Volume}}
-	Air conditioning solutions have conceptually trended from one air conditioner for one house to independent air conditioning for different zones of the same house\cite{park2001performance}. VRF (also known as VRV for Variable Refrigerant Volume) systems appeared originally in Japan in the 1980s and consist of a multi-split system of one outdoor unit and multiple indoor units. It is a ductless system similar to the familiar mini-split type air conditioners with an outdoor compressor unit feeding the expansion valves of the indoor evaporators using variable speed compressors. "Variable" flow stems from the fact that the system controls the amount of refrigerant flowing to each indoor evaporator. This property opens up different configurations with different evaporator capacities such as simultaneous heating and cooling and heat recovery from one zone to another\cite{goetzler2007variable}.
-	There is a fair amount of literature\cite{jian2011study, ran2011wu, li2014testing}  on the usage of air conditioners in households  with multiple units, the general conclusion being that it's very rare when a household uses all its air conditioners simultaneously. It has been noted that sharing the outdoor units among multiple indoor units in a centralized multi-split type system is an effective optimization strategy\cite{li2017simulation} with predicted energy saving ratios of around 11-12\% on a VRF system with original split-type air conditioners, depending on location. Some more factors that made the VRF system the optimal choice for TDART are the fact that it's a direct expansion DX system with lower maintenance costs than chilled water systems (no water treatment problems). It's also inherently modular and each module would be a quasi-independent refrigerant loop, although the modules would still be controlled by a common control system. Evidently, this fits nicely with the modular nature of the rest of TDART.\\
-	-talk about heat recovery ventilation-
+	\textcolor{orange}{\chapter{Variable Refrigerant Flow and sustainable insulation}}
+	There is a fair amount of literature\cite{jian2011study, ran2011wu, li2014testing}  on the usage of air conditioners in households  with multiple units, the general conclusion being that it's very rare when a household uses all its air conditioners simultaneously.
+	Air conditioning solutions have therefore conceptually trended from one air conditioning system for each zone to independent air conditioning for different zones of the same house under a single system\cite{park2001performance}. VRF (also known as VRV for Variable Refrigerant Volume) systems appeared originally in Japan in the 1980s and consist of a multi-split system of one outdoor unit and multiple indoor units. It is a ductless system similar to the familiar mini-split type air conditioners with an outdoor compressor unit feeding the expansion valves of the indoor evaporators using variable speed compressors. "Variable" flow stems from the fact that the system controls the amount of refrigerant flowing to each indoor evaporator. This property opens up different configurations with different evaporator capacities such as simultaneous heating and cooling and heat recovery from one zone to another\cite{goetzler2007variable}.
+	It has been noted that sharing the outdoor units among multiple indoor units in a centralized multi-split type system is an effective optimization strategy\cite{li2017simulation} with predicted energy saving ratios of around 11-12\% on a VRF system with original split-type air conditioners, depending on location. A few more factors that point to the VRF system as the optimal choice for TDART are the fact that it's a direct expansion DX system with lower maintenance costs than chilled water systems (no water treatment problems) and that it's inherently modular. Each module would be a quasi-independent refrigerant loop, although the modules would still be controlled by a common control system. Evidently, this fits nicely with the modular nature of the rest of TDART.
+\par To supplement the VRF air conditioning we opted for a ventilation system with heat recovery. The system extracts air from the kitchens and bathrooms while simultaneously introducing fresh air from outdoors into the living room and bedrooms. During nominal operation the amount of air removed from indoors is similar to the air introduced into the house by the system. During winter, heat from the rejected air is transferred to the incoming fresh air before it is led indoors, recovering considerable amounts of energy.
+\par 
+One of the first steps towards reducing the cooling/heating load of any building, regardless of the type of air conditioning used, is thermal insulation. An insulating envelope can significantly reduce the energy and the size of the required air conditioning system. It also helps retain acceptable thermal comfort conditions for longer. While commercial insulation materials like extruded polystyrene (XPS) have good durability, we opted to supplement ours with textile waste. There is a significant amount of textile waste that is discarded each year by the textile industry, and only a small percentage of it is recycled. Finding different applications for it is a straightforward solution. This particular application of textile waste as thermal insulation has been investigated before. Fabric waste was found to be an adequate alternative to EPS/XPS insulation by Briga-Sa et al.\cite{briga2013textile} and El Wazna et al.\cite{el2017thermo} found acrylic and wool based nonwoven waste to have excellent thermal insulation properties. This encouraged us to try nonwoven textile waste that contains a combination of PES-Acrylic-Cotton and bico fibers as an additional insulation layer on top of the XPS. The exact effects and performance of this kind of insulation is difficult to measure due to lack of standardization of textile waste and ambiguity in its porosity and thermo-physical characteristics. Nevertheless, we are hopeful that this type of insulation can provide a more sustainable alternative to traditional commercial insulators in the future.\\
+\begin{table}
+    \begin{tabular*}{\textwidth}{@{}ll@{}}
+       \toprule
+       \textbf{\textcolor{orange}{Property}} & \textcolor{orange}{\textbf{Value}} \\\midrule
+       Composition &     
+       \begin{tabular}{@{}llll@{}}
+          \textit{PES: } & $40\%$ & \textit{Acrylic: } & $15\%$ \\ 
+          \textit{Cotton: } & $10\%$ & \textit{Bico: } & $35\%$\\
+        \end{tabular}\\[10pt] 
+       Density (\si{\kilo\gram\per\square\meter})  & 37 \\[5pt]
+       Thermal conductivity (\si{\watt\per\meter\per\kelvin}) & $\sim 0.037$\\[5pt]
+       Thermal resistance\footnotemark{} (\si{\square\meter\kelvin\per\watt}) & $\sim 1.351$\\ 
+       \bottomrule
+    \end{tabular*}
+    \caption{Physical properties and composition of the used textile waste insulation.}
+    \label{tab:insul}
+\end{table}
+\footnotetext{for a thickness of $50$\si{\milli\meter}}
+
+\begin{marginfigure}
+    \includegraphics[width=\textwidth]{insul}
+    \caption{A sample of the nonwoven textile waste insulation}
+\end{marginfigure}
+
 	\textcolor{orange}{\chapter{Home automation}}
 	-system details needed-
 	\textcolor{orange}{\chapter{Water Reuse}}

@@ -7,7 +7,7 @@
 \usepackage{booktabs}
 \usepackage{xspace} % Prints a trailing space in a smart way.
 \usepackage{units}
-\usepackage{xcolor}
+\usepackage{xcolor} 
 \usepackage{pagecolor}
 \usepackage{siunitx}
 \usepackage{booktabs}
@@ -92,7 +92,7 @@
 
 \newsavebox{\titleimage}
 \savebox{\titleimage}{\centering\includegraphics[height=5\baselineskip]{logo_white}}
-\author{Team TDART\hfill \usebox{\titleimage}}
+\author{Team TDART\hfill \usebox{\titleimage} }
 \title[Jury Narratives]{Jury Narratives: Innovation}
 \publisher{Université Abdelmalek Essaadi}
 
@@ -136,7 +136,8 @@
 	The courtyard or "patio" is mostly shaded until late in the day even in low latitude regions. During the night, it loses heat by radiation to the sky\cite{batty1991natural} and provides natural cooling as the stratified cool air from convective flows in the courtyard seeps into the surrounding rooms. Many authors\cite{scudo1988climatic,fathy1986natural} conclude that a courtyard constitutes a free and passive cooling system for the house, with some reservations being shown by others\cite{etzion1990thermal}, specifically for non-shaded courtyards where courtyard temperature might turn out to be higher than ambient temperature. TDART takes the best of both worlds and incorporates a retractable roof in the patio. This protects the courtyard from solar irradiation, keeping the air temperature as low as possible when the roof is closed during the day and the sun is high, while also providing the option to open it to the sky in the mornings or later in the night to allow the walls and surface of the patio to radiate heat away towards the sky. It has been noted that a courtyard that includes a body of water (pond or pool) and that can be covered during the day provides remarkable cooling properties\cite{al2001effect}. This is where the fountain comes in, it salvages the benefits of a body of water and has a similar effect on the patio while being a much cheaper option than the pool.\\
 	In conclusion, TDART makes use of the patio's inherent cooling and ventilation properties and adds novel ideas such as a fountain and a retractable roof to improve it while also mitigating some of the possible shortcomings of a simple courtyard.
 	
-	\textcolor{orange}{\chapter{Variable Refrigerant Flow and sustainable insulation}}
+	\textcolor{orange}{\chapter{Sustainable HVAC, insulation and lighting}}
+	
 	There is a fair amount of literature\cite{jian2011study, ran2011wu, li2014testing}  on the usage of air conditioners in households  with multiple units, the general conclusion being that it's very rare when a household uses all its air conditioners simultaneously.
 	Air conditioning solutions have therefore conceptually trended from one air conditioning system for each zone to independent air conditioning for different zones of the same house under a single system\cite{park2001performance}. VRF (also known as VRV for Variable Refrigerant Volume) systems appeared originally in Japan in the 1980s and consist of a multi-split system of one outdoor unit and multiple indoor units. It is a ductless system similar to the familiar mini-split type air conditioners with an outdoor compressor unit feeding the expansion valves of the indoor evaporators using variable speed compressors. "Variable" flow stems from the fact that the system controls the amount of refrigerant flowing to each indoor evaporator. This property opens up different configurations with different evaporator capacities such as simultaneous heating and cooling and heat recovery from one zone to another\cite{goetzler2007variable}.
 	It has been noted that sharing the outdoor units among multiple indoor units in a centralized multi-split type system is an effective optimization strategy\cite{li2017simulation} with predicted energy saving ratios of around 11-12\% on a VRF system with original split-type air conditioners, depending on location. A few more factors that point to the VRF system as the optimal choice for TDART are the fact that it's a direct expansion DX system with lower maintenance costs than chilled water systems (no water treatment problems) and that it's inherently modular. Each module would be a quasi-independent refrigerant loop, although the modules would still be controlled by a common control system. Evidently, this fits nicely with the modular nature of the rest of TDART.
@@ -161,6 +162,9 @@ One of the first steps towards reducing the cooling/heating load of any building
     \label{tab:insul}
 \end{table}
 \footnotetext{for a thickness of $50$\si{\milli\meter}}
+
+\par
+A third and final aspect of our system is the inclusion of a simple and affordable house automation system that provides adequate energy savings within our budget considering the state of the market of house automation systems. It is a simple light dimming system that reduces consumption when natural lighting is available or sets the mood when dim lights are simply desired by the inhabitants.
 
 \begin{marginfigure}
     \includegraphics[width=\textwidth]{insul}
